@@ -36,7 +36,7 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
     title: "apps",
     links: [
       { img: faCalendar, txt: "Calendar", link: "calendar" },
-      { img: faBorderAll, txt: "Kanban", link: " " },
+      { img: faBorderAll, txt: "Kanban", link: "kanban" },
       { img: faPenToSquare, txt: "Editor", link: "editor" },
       { img: faEyeDropper, txt: "Color-Picker", link: "colorPicker" },
     ],

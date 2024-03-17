@@ -17,6 +17,7 @@ import {
   Orders,
   Employees,
   Customers,
+  Kanban,
 } from "../../components";
 export default function MyContainer() {
   // const { setTheme } = useTheme();
@@ -37,6 +38,7 @@ export default function MyContainer() {
             <Route path="orders" element={<Orders />} />
             <Route path="employees" element={<Employees />} />
             <Route path="customers" element={<Customers />} />
+            <Route path="Kanban" element={<Kanban />} />
           </Routes>
         </div>
       </div>
