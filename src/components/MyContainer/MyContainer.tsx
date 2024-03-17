@@ -15,6 +15,7 @@ import {
   Calendar,
   Area,
   Orders,
+  Employees,
 } from "../../components";
 export default function MyContainer() {
   // const { setTheme } = useTheme();
@@ -33,6 +34,7 @@ export default function MyContainer() {
             <Route path="calendar" element={<Calendar />} />
             <Route path="area" element={<Area />} />
             <Route path="orders" element={<Orders />} />
+            <Route path="employees" element={<Employees />} />
           </Routes>
         </div>
       </div>
