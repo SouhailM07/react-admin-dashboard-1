@@ -12,6 +12,7 @@ import {
   Ecommerce,
   Navbar,
   LineChart,
+  Calendar
 } from "../../components";
 export default function MyContainer() {
   // const { setTheme } = useTheme();
@@ -27,6 +28,7 @@ export default function MyContainer() {
             <Route path="editor" element={<Editor />} />
             <Route path="colorPicker" element={<ColorPicker />} />
             <Route path="line" element={<LineChart />} />
+            <Route path="calendar" element={<Calendar />} />
           </Routes>
         </div>
       </div>
