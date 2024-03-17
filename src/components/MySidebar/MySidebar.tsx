@@ -1,11 +1,9 @@
 import "./mysidebar.css";
-// next
-import { Link } from "react-router-dom";
+// react router dom
+import { Link, useLocation } from "react-router-dom";
 // zustand
 import toggleStore from "@/zustand/toggleStore";
 import themeStore from "@/zustand/themeStore";
-// hooks
-import { useState } from "react";
 // ! arrays
 import { arrOfSidebarLinks } from "@/arrays";
 // shadcn-ui
@@ -15,8 +13,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function MySidebar() {
+  const location = useLocation();
+
   const { toggleSidebar, editToggleSidebar } = toggleStore((state) => state);
-  const [selectedLink, setSelectedLink] = useState({ bar: 0, link: 0 });
   const { themeIndex } = themeStore((state) => state);
   // ! handlers
   const handleToggle = () => editToggleSidebar();
@@ -27,7 +26,7 @@ export default function MySidebar() {
         <aside id="MySidebar">
           <ScrollArea className=" h-screen py-[0.7rem]">
             <article className="flex items-center justify-between pr-[1rem] mb-[2rem]">
-              <h1 className="font-bold ">Shoppy</h1>
+              <h1 className="font-bold ">Shoppy </h1>
               <FontAwesomeIcon
                 icon={faCircleXmark}
                 role="button"
@@ -58,21 +57,15 @@ export default function MySidebar() {
                               id={e1.txt}
                               name="MySidebar"
                               className="hidden"
-                              checked={
-                                i == selectedLink.bar && i1 == selectedLink.link
-                              }
+                              checked={`/${e1.link}` == location.pathname}
                               onChange={() => {}}
                             />
                             <label
                               className={` ${
-                                i == selectedLink.bar &&
-                                i1 == selectedLink.link &&
+                                `/${e1.link}` == location.pathname &&
                                 `themeIndex-${themeIndex}`
                               }`}
                               htmlFor={e1.txt}
-                              onClick={() => {
-                                setSelectedLink({ bar: i, link: i1 });
-                              }}
                             >
                               <Link
                                 to={`/${e1.link!}`}
