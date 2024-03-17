@@ -16,6 +16,7 @@ import {
   Area,
   Orders,
   Employees,
+  Customers,
 } from "../../components";
 export default function MyContainer() {
   // const { setTheme } = useTheme();
@@ -35,6 +36,7 @@ export default function MyContainer() {
             <Route path="area" element={<Area />} />
             <Route path="orders" element={<Orders />} />
             <Route path="employees" element={<Employees />} />
+            <Route path="customers" element={<Customers />} />
           </Routes>
         </div>
       </div>

@@ -29,7 +29,7 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
     links: [
       { img: faCartShopping, txt: "Orders", link: "orders" },
       { img: faUserGroup, txt: "Employees", link: "employees" },
-      { img: faUsers, txt: "Customers", link: " " },
+      { img: faUsers, txt: "Customers", link: "customers" },
     ],
   },
   {
