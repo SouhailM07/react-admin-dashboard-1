@@ -28,15 +28,15 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
     title: "pages",
     links: [
       { img: faCartShopping, txt: "Orders", link: "orders" },
-      { img: faUserGroup, txt: "Employees", link: "" },
-      { img: faUsers, txt: "Customers", link: "" },
+      { img: faUserGroup, txt: "Employees", link: " " },
+      { img: faUsers, txt: "Customers", link: " " },
     ],
   },
   {
     title: "apps",
     links: [
       { img: faCalendar, txt: "Calendar", link: "calendar" },
-      { img: faBorderAll, txt: "Kanban", link: "" },
+      { img: faBorderAll, txt: "Kanban", link: " " },
       { img: faPenToSquare, txt: "Editor", link: "editor" },
       { img: faEyeDropper, txt: "Color-Picker", link: "colorPicker" },
     ],
@@ -45,12 +45,12 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
     title: "charts",
     links: [
       { img: faChartLine, txt: "Line", link: "line" },
-      { img: faChartColumn, txt: "Area", link: "" },
-      { img: faChartColumn, txt: "Bar", link: "" },
-      { img: faChartPie, txt: "Pie", link: "" },
-      { img: faCoins, txt: "Financial", link: "" },
-      { img: faSignal, txt: "Color-Mapping", link: "" },
-      { img: faCaretUp, txt: "Pyramid", link: "" },
+      { img: faChartColumn, txt: "Area", link: "area" },
+      { img: faChartColumn, txt: "Bar", link: " " },
+      { img: faChartPie, txt: "Pie", link: " " },
+      { img: faCoins, txt: "Financial", link: " " },
+      { img: faSignal, txt: "Color-Mapping", link: " " },
+      { img: faCaretUp, txt: "Pyramid", link: " " },
     ],
   },
 ];
