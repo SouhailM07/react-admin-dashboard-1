@@ -1,4 +1,3 @@
-"use client";
 import "./settingsbtn.css";
 // zustand
 import themeStore from "@/zustand/themeStore";
