@@ -44,7 +44,7 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
   {
     title: "charts",
     links: [
-      { img: faChartLine, txt: "Line", link: "" },
+      { img: faChartLine, txt: "Line", link: "line" },
       { img: faChartColumn, txt: "Area", link: "" },
       { img: faChartColumn, txt: "Bar", link: "" },
       { img: faChartPie, txt: "Pie", link: "" },

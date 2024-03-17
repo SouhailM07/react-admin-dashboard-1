@@ -11,6 +11,7 @@ import {
   SettingsPanel,
   Ecommerce,
   Navbar,
+  LineChart,
 } from "../../components";
 export default function MyContainer() {
   // const { setTheme } = useTheme();
@@ -25,6 +26,7 @@ export default function MyContainer() {
             <Route path="/" element={<Ecommerce />} />
             <Route path="editor" element={<Editor />} />
             <Route path="colorPicker" element={<ColorPicker />} />
+            <Route path="line" element={<LineChart />} />
           </Routes>
         </div>
       </div>
