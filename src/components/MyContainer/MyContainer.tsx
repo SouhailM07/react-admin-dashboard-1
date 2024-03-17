@@ -14,6 +14,7 @@ import {
   LineChart,
   Calendar,
   Area,
+  Orders,
 } from "../../components";
 export default function MyContainer() {
   // const { setTheme } = useTheme();
@@ -31,6 +32,7 @@ export default function MyContainer() {
             <Route path="line" element={<LineChart />} />
             <Route path="calendar" element={<Calendar />} />
             <Route path="area" element={<Area />} />
+            <Route path="orders" element={<Orders />} />
           </Routes>
         </div>
       </div>
