@@ -18,6 +18,18 @@ module.exports = {
     },
     extend: {
       colors: {
+        // custom
+        mainPages: "#fafafa",
+        sidebarTitles: "#4D5A5B",
+        sidebarLinks: "#374152",
+        // themes
+        primaryCyan: "#02c8d6",
+        themeBlue: "#1b96f5",
+        themeViolet: "#7152ff",
+        themeRed: "#ff5c8d",
+        themeIndigo: "#1d4cb8",
+        themeOrange: "#fa9678",
+        // shadcn-ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

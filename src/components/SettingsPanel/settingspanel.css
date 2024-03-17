@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.SettingsPanel__hr {
+  @apply my-[1rem];
+}
+
+.themeIndex-0 {
+  @apply bg-primaryCyan;
+}
+
+.themeIndex-1 {
+  @apply bg-themeBlue;
+}
+
+.themeIndex-2 {
+  @apply bg-themeViolet;
+}
+
+.themeIndex-3 {
+  @apply bg-themeRed;
+}
+
+.themeIndex-4 {
+  @apply bg-themeIndigo;
+}
+
+.themeIndex-5 {
+  @apply bg-themeOrange;
+}
+
+.themIndex__txt-0 {
+  @apply text-primaryCyan;
+}
+
+.themIndex__txt-1 {
+  @apply text-themeBlue;
+}
+
+.themIndex__txt-2 {
+  @apply text-themeViolet;
+}
+
+.themIndex__txt-3 {
+  @apply text-themeRed;
+}
+
+.themIndex__txt-4 {
+  @apply text-themeIndigo;
+}
+
+.themIndex__txt-5 {
+  @apply text-themeOrange;
+}

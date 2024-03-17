@@ -22,7 +22,7 @@ import {
 export const arrOfSidebarLinks: sidebarLinks[] = [
   {
     title: "dashboard",
-    links: [{ img: faBagShopping, txt: "Ecommerce", link: "/" }],
+    links: [{ img: faBagShopping, txt: "Ecommerce", link: "" }],
   },
   {
     title: "pages",
