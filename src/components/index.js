@@ -11,3 +11,4 @@ export { default as Editor } from "./Editor/Editor";
 export { default as ColorPicker } from "./ColorPicker/ColorPicker";
 export { default as LineChart } from "./LineChart/LineChart";
 export { default as Area } from "./Area/Area";
+export { default as Employees } from "./Employees/Employees";
