@@ -10,3 +10,4 @@ export { default as Calendar } from "./Calendar/Calendar";
 export { default as Editor } from "./Editor/Editor";
 export { default as ColorPicker } from "./ColorPicker/ColorPicker";
 export { default as LineChart } from "./LineChart/LineChart";
+export { default as Area } from "./Area/Area";
