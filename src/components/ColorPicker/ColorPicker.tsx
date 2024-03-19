@@ -26,9 +26,9 @@ const MyCustomPicker = ({ title, type }) => {
 export default function ColorPicker() {
   return (
     <>
-      <main className="text-center lg:px-[2rem] max-w-[90rem] mx-auto overflow-hidden w-full">
+      <main className="text-center  lg:px-[2rem] max-w-[90rem] mx-auto  w-full">
         <article id="preview" />
-        <article className="flex justify-center items-center gap-20 flex-wrap">
+        <article className="flex justify-center items-center gap-20 w-auto flex-wrap ">
           <MyCustomPicker title="Inline Pallet" type="Palette" />
           <MyCustomPicker title="Inline Picker" type="Picker" />
         </article>

@@ -46,11 +46,11 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
     links: [
       { img: faChartLine, txt: "Line", link: "line" },
       { img: faChartColumn, txt: "Area", link: "area" },
-      { img: faChartColumn, txt: "Bar", link: " " },
-      { img: faChartPie, txt: "Pie", link: " " },
-      { img: faCoins, txt: "Financial", link: " " },
-      { img: faSignal, txt: "Color-Mapping", link: " " },
-      { img: faCaretUp, txt: "Pyramid", link: " " },
+      // { img: faChartColumn, txt: "Bar", link: " " },
+      // { img: faChartPie, txt: "Pie", link: " " },
+      // { img: faCoins, txt: "Financial", link: " " },
+      // { img: faSignal, txt: "Color-Mapping", link: " " },
+      // { img: faCaretUp, txt: "Pyramid", link: " " },
     ],
   },
 ];
