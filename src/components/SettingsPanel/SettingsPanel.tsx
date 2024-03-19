@@ -2,7 +2,6 @@ import "./settingspanel.css";
 // components
 import { SettingsBtn } from "@/components";
 // hooks
-import { useState } from "react";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 // zustand
 import themeStore from "@/zustand/themeStore";
@@ -15,26 +14,32 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
 // assets
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function SettingsPanel() {
   const { setTheme } = useTheme();
-  const [mode, setMode] = useState<boolean>(false);
   const themeOptions = [
     {
       label: "Light",
       func: () => {
         setTheme("light");
-        setMode(false);
       },
     },
     {
       label: "Dark",
       func: () => {
         setTheme("dark");
-        setMode(true);
+      },
+    },
+    {
+      label: "System",
+      func: () => {
+        setTheme("system");
       },
     },
   ];
@@ -54,24 +59,22 @@ export default function SettingsPanel() {
               <h1 className=" font-bold mb-[1rem] dark:text-red-500 ">
                 Theme option
               </h1>
-              <ul role="list" className="space-y-[0.5rem]">
+              <RadioGroup
+                defaultValue="System"
+                role="list"
+                className="space-y-[0.5rem]"
+              >
                 {themeOptions.map((e, i) => {
                   return (
-                    <li role="listitem" key={i} className="space-x-[1rem]">
-                      <input
-                        type="radio"
-                        name="mode"
-                        id={e.label + i}
-                        checked={+mode == i}
-                        onChange={() => {}}
-                      />
-                      <label htmlFor={e.label + i} onClick={e.func}>
+                    <li role="listitem" className="flex items-center space-x-2">
+                      <RadioGroupItem value={e.label} id={`r${i}`} />
+                      <Label onClick={() => e.func()} htmlFor={`r${i}`}>
                         {e.label}
-                      </label>
+                      </Label>
                     </li>
                   );
                 })}
-              </ul>
+              </RadioGroup>
               <hr className="SettingsPanel__hr" />
               <h1>Theme colors</h1>
               <ul className="flex space-x-[0.7rem] mt-[1rem]">

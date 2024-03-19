@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 #preview {
-  @apply bg-no-repeat bg-transparent inline-block h-[80px] my-[10px] min-w-[300px] max-w-[600px] bg-[#008000];
+  @apply bg-no-repeat inline-block h-[80px] my-[10px] min-w-[300px] max-w-[600px];
   background: url("https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png");
 }
 body {
