@@ -14,3 +14,4 @@ export { default as Area } from "./Area/Area";
 export { default as Employees } from "./Employees/Employees";
 export { default as Customers } from "./Customers/Customers";
 export { default as Kanban } from "./Kanban/Kanban";
+export { default as MySparkLine } from "./MySparkLine/MySparkLine";
