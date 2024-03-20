@@ -1,8 +1,11 @@
 import "./ecommerce.css";
 // ? types
 import { myBox } from "@/types";
+// components
+import { MySparkLine, MyStacked } from "@/components";
 // ! arrays
 import { arrOfBoxes } from "@/arrays";
+import { SparklineAreaData } from "@/data/dummy";
 // zustand
 import themeStore from "@/zustand/themeStore";
 // assets
@@ -32,6 +35,22 @@ export default function Ecommerce() {
                 />
               );
             })}
+          </section>
+        </article>
+        <article className="flex justify-between">
+          <section>
+            <MySparkLine
+              currentColor={"cyan"}
+              id="line-sparkLine"
+              type="Line"
+              height="80px"
+              width="250px"
+              data={SparklineAreaData}
+              color={"cyan"}
+            />
+          </section>
+          <section>
+            <MyStacked width="320px" height="360px" />
           </section>
         </article>
       </main>
