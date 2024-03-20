@@ -22,7 +22,7 @@ export default function Orders() {
   return (
     <>
       <main className="lg:px-[2rem] max-w-[90rem] mx-auto ">
-        <Header title="page" txt="orders" />
+        <Header title="pages" txt="orders" />
         <GridComponent
           dataSource={ordersData}
           allowPaging

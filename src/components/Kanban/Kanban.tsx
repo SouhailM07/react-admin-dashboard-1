@@ -13,7 +13,7 @@ export default function Kanban() {
   return (
     <>
       <main>
-        <Header title="apps" txt="kanban" />
+        <Header title="app" txt="kanban" />
         <KanbanComponent
           dataSource={kanbanData}
           cardSettings={{ contentField: "Summary", headerField: "Id" }}

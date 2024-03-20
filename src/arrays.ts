@@ -11,10 +11,7 @@ import {
   faEyeDropper,
   faChartLine,
   faChartColumn,
-  faChartPie,
-  faCoins,
   faSignal,
-  faCaretUp,
   faBox,
   faRotate,
 } from "@fortawesome/free-solid-svg-icons";

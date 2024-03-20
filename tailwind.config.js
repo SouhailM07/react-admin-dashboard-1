@@ -16,6 +16,7 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    screens: { lg: "1024px", md: "768px", sm: "450px" },
     extend: {
       colors: {
         // custom

@@ -5,6 +5,8 @@ import { SettingsBtn } from "@/components";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 // zustand
 import themeStore from "@/zustand/themeStore";
+//
+import soundEffect from "sound-effect";
 // shadcn-ui
 import {
   Sheet,
@@ -23,6 +25,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function SettingsPanel() {
   const { setTheme } = useTheme();
+  const { sound, effects } = soundEffect();
   const themeOptions = [
     {
       label: "Light",
@@ -66,7 +69,10 @@ export default function SettingsPanel() {
               >
                 {themeOptions.map((e, i) => {
                   return (
-                    <li role="listitem" className="flex items-center space-x-2">
+                    <li
+                      role="listitem"
+                      className="flex cursor-pointer items-center space-x-2"
+                    >
                       <RadioGroupItem value={e.label} id={`r${i}`} />
                       <Label onClick={() => e.func()} htmlFor={`r${i}`}>
                         {e.label}
@@ -85,7 +91,10 @@ export default function SettingsPanel() {
                       <li
                         role="button"
                         key={i}
-                        onClick={() => editThemeIndex(i)}
+                        onClick={() => {
+                          editThemeIndex(i);
+                          sound(effects.tap1);
+                        }}
                         className={`cursor-pointer text-white h-[2rem] rounded-full grid place-items-center w-[2rem] themeIndex-${i}`}
                       >
                         {themeIndex == i && <FontAwesomeIcon icon={faCheck} />}

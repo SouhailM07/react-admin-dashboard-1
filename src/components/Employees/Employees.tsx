@@ -18,7 +18,7 @@ export default function Employees() {
   return (
     <>
       <main className="lg:px-[2rem] max-w-[90rem] mx-auto ">
-        <Header title="page" txt="orders" />
+        <Header title="pages" txt="Employees" />
         <GridComponent
           dataSource={employeesData}
           allowPaging

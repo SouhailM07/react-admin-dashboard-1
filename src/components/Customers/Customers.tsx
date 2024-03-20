@@ -19,7 +19,7 @@ export default function Customers() {
   return (
     <>
       <main className="lg:px-[2rem] max-w-[90rem] mx-auto">
-        <Header title="page" txt="orders" />
+        <Header title="page" txt="customers" />
         <GridComponent
           dataSource={customersData}
           allowPaging

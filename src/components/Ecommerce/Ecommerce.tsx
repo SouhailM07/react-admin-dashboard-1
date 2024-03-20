@@ -16,10 +16,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 /*=============================================================================================*/
 
 export default function Ecommerce() {
+  const { themeIndex } = themeStore((state) => state);
   return (
     <>
-      <main className="px-[2rem] pt-[4rem] w-full dark:text-black">
-        <article className="flex space-x-[1rem] w-full">
+      <main className="max-sm:px-[0.5rem] px-[2rem] py-[4rem] w-full dark:text-black">
+        <article className="flex max-md:flex-wrap max-md:justify-center max-md:gap-[2rem] space-x-[1rem] w-full">
           <Earnings />
           <section className="flex justify-around max-w-[65rem]  flex-wrap gap-[1rem]">
             {arrOfBoxes.map((e, i) => {
@@ -37,21 +38,58 @@ export default function Ecommerce() {
             })}
           </section>
         </article>
-        <article className="flex justify-between">
-          <section>
-            <MySparkLine
-              currentColor={"cyan"}
-              id="line-sparkLine"
-              type="Line"
-              height="80px"
-              width="250px"
-              data={SparklineAreaData}
-              color={"cyan"}
-            />
+        <article className="mt-[5rem] space-y-[4rem]">
+          <section className="flex justify-between gap-[1rem] flex-wrap">
+            <h1 className="text-[1.4rem] max-md:text-[0.9rem] dark:text-white font-bold">
+              Revenue Updates
+            </h1>
+            <div className="flex space-x-[2rem] max-md:text-[0.7rem]">
+              <div className="flex items-center space-x-[1rem] dark:text-white">
+                <div className="h-2 w-2 rounded-full dark:bg-white  bg-black"></div>
+                <p>Express</p>
+              </div>
+              <div className="flex items-center  space-x-[1rem] text-green-400">
+                <div className="h-2 w-2 rounded-full bg-green-400"></div>
+                <p>Budget</p>
+              </div>
+            </div>
           </section>
-          <section>
-            <MyStacked width="320px" height="360px" />
-          </section>
+          <div className="flex justify-start max-lg:gap-[5rem] max-lg:flex-col max-lg:items-center items-start flex-wrap gap-[10rem] ">
+            <section className="bg-white drop-shadow-lg p-3 rounded-md space-y-[1rem]">
+              <div>
+                <p className="text-[1.3rem] font-bold">$93,438</p>
+                <span className="text-gray-500 text-[0.8rem] font-medium">
+                  Budget
+                </span>
+                <span className="translate-x-[3rem]  translate-y-[-1rem] p-1 text-[0.6rem] inline-block bg-green-400 text-white rounded-full">
+                  23%
+                </span>
+              </div>
+              <div>
+                <p className="text-[1.3rem] font-bold">$48,487</p>
+                <span className="text-gray-500 text-[0.8rem] font-medium">
+                  Expense
+                </span>
+              </div>
+              <MySparkLine
+                currentColor={"cyan"}
+                id="line-sparkLine"
+                type="Line"
+                height="80px"
+                width="250px"
+                data={SparklineAreaData}
+                color={"cyan"}
+              />
+              <button
+                className={`themeIndex-${themeIndex} cursor-pointer hover:drop-shadow-xl text-white w-[10rem] rounded-md h-[3rem]  mt-[2rem]`}
+              >
+                Download Report
+              </button>
+            </section>
+            <section>
+              <MyStacked width="320px" height="360px" />
+            </section>
+          </div>
         </article>
       </main>
     </>
@@ -61,7 +99,7 @@ export default function Ecommerce() {
 const Earnings = () => {
   const { themeIndex } = themeStore((state) => state);
   return (
-    <section className="min-w-[16rem] rounded-xl drop-shadow-xl bg-white grid grid-cols-2 grid-rows-[1.5rem_1.5rem_1fr] px-[1.5rem] py-[1rem] h-[10rem]">
+    <section className="min-w-[16rem] rounded-xl drop-shadow-xl bg-white grid grid-cols-2 grid-rows-[1.5rem_1.5rem_1fr] px-[1.5rem] py-[1rem] h-[10rem]  ">
       <h1 className="text-sidebarTitles text-[0.8rem] mt-[0.4rem] font-bold">
         Earnings
       </h1>
