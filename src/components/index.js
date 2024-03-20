@@ -15,3 +15,4 @@ export { default as Employees } from "./Employees/Employees";
 export { default as Customers } from "./Customers/Customers";
 export { default as Kanban } from "./Kanban/Kanban";
 export { default as MySparkLine } from "./MySparkLine/MySparkLine";
+export { default as MyStacked } from "./MyStacked/MyStacked";
