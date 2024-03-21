@@ -24,23 +24,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function SettingsPanel() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
   const { sound, effects } = soundEffect();
   const themeOptions = [
     {
-      label: "Light",
+      label: "light",
       func: () => {
         setTheme("light");
       },
     },
     {
-      label: "Dark",
+      label: "dark",
       func: () => {
         setTheme("dark");
       },
     },
     {
-      label: "System",
+      label: "system",
       func: () => {
         setTheme("system");
       },
@@ -63,7 +63,7 @@ export default function SettingsPanel() {
                 Theme option
               </h1>
               <RadioGroup
-                defaultValue="System"
+                defaultValue={theme}
                 role="list"
                 className="space-y-[0.5rem]"
               >
@@ -74,7 +74,11 @@ export default function SettingsPanel() {
                       className="flex cursor-pointer items-center space-x-2"
                     >
                       <RadioGroupItem value={e.label} id={`r${i}`} />
-                      <Label onClick={() => e.func()} htmlFor={`r${i}`}>
+                      <Label
+                        className="capitalize"
+                        onClick={() => e.func()}
+                        htmlFor={`r${i}`}
+                      >
                         {e.label}
                       </Label>
                     </li>
